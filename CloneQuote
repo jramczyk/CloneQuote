@@ -8,7 +8,7 @@ Description : VF page CloneQuote to clone Quote Data with or without QLI
     <apex:form id="frm">
         <apex:pageMessages ></apex:pageMessages>
             <apex:pageBlock title="Clone Quote">
-                <apex:pageBlockbuttons >
+                <apex:pageBlockbuttons location="bottom">
                     <apex:commandButton value="Clone" action="{!createClonedQuote}" oncomplete="CloseAndRefresh();" reRender="frm" status="status_wait"/>
                     <apex:commandButton value="Close" action="{!cancel}"/>                    
                 </apex:pageBlockbuttons>

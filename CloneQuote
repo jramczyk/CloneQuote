@@ -1,15 +1,15 @@
-<!-- /****************************************************************
+<!--*********************************************************************
 Name        : CloneQuote
 Created Date: 1/21/2018
 Controller  : CloneQuoteExtn
 Description : VF page CloneQuote to clone Quote Data with or without QLI
-*****************************************************************/ -->
-<apex:page standardController="Quote" extensions="CloneQuoteExtn" showHeader="false" sidebar="false" lightningstylesheets="true">
+*************************************************************************-->
+<apex:page standardController="Quote" extensions="CloneQuoteExtn" lightningstylesheets="true">
     <apex:form id="frm">
         <apex:pageMessages ></apex:pageMessages>
             <apex:pageBlock title="Clone Quote">
                 <apex:pageBlockbuttons location="bottom">
-                    <apex:commandButton value="Clone" action="{!createClonedQuote}" oncomplete="CloseAndRefresh();" reRender="frm" status="status_wait"/>
+                    <apex:commandButton value="Clone" action="{!createClonedQuote}" onclick="this.onclick=function(){return false;}" oncomplete="CloseAndRefresh();" reRender="frm" status="status_wait"/>
                     <apex:commandButton value="Close" action="{!cancel}"/>                    
                 </apex:pageBlockbuttons>
                 <apex:pageBlockSection columns="1">
